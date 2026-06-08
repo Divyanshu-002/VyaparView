@@ -9,7 +9,8 @@ import { Bar, Line, Doughnut } from 'react-chartjs-2';
 ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement,
   PointElement, ArcElement, Title, Tooltip, Legend, Filler);
 
-const API = '/api';
+// YE KARO (SAHI)
+const API = process.env.REACT_APP_API_URL || '/api';
 const FONT = { family: 'DM Sans, system-ui, sans-serif', size: 12 };
 const GRID = 'rgba(48,54,61,0.9)';
 const TICK = '#484f58';

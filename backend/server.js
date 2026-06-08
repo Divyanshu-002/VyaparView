@@ -8,13 +8,13 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
+// YE KARO (SAHI)
 const db = mysql.createPool({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'Divyanshu@1234',          // <-- APNA MySQL PASSWORD YAHAN LIKHO
-  database : 'snapdeal_db',
-  waitForConnections: true,
-  connectionLimit   : 10,
+  host     : process.env.MYSQLHOST,
+  user     : process.env.MYSQLUSER,
+  password : process.env.MYSQLPASSWORD,
+  database : process.env.MYSQLDATABASE,
+  port     : process.env.MYSQLPORT,
 });
 
 app.get('/api/health', (req, res) => {
