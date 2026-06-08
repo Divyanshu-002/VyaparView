@@ -300,6 +300,7 @@ const PAGES = [
 
 export default function App() {
   const [page,setPage]         = useState('overview');
+  const [dateRange, setDateRange] = useState('Jan – Aug 2024');
   const [summary,setSummary]   = useState(null);
   const [catData,setCatData]   = useState([]);
   const [monthly,setMonthly]   = useState([]);
