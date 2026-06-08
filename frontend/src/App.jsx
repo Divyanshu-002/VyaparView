@@ -300,7 +300,7 @@ const PAGES = [
 
 export default function App() {
   const [page,setPage]         = useState('overview');
-  const [dateRange, setDateRange] = useState('Jan – Aug 2024');
+  const [dateRange, setDateRange] = useState('Jan - Aug 2024');
   const [summary,setSummary]   = useState(null);
   const [catData,setCatData]   = useState([]);
   const [monthly,setMonthly]   = useState([]);
@@ -388,11 +388,11 @@ export default function App() {
   value={dateRange}
   onChange={e => setDateRange(e.target.value)}
 >
-  <option value="Jan – Aug 2024">Jan – Aug 2024</option>
-  <option value="Sep – Dec 2024">Sep – Dec 2024</option>
-  <option value="Jan – Jun 2025">Jan – Jun 2025</option>
-  <option value="Jul – Dec 2025">Jul – Dec 2025</option>
-  <option value="Jan – Jun 2026">Jan – Jun 2026</option>
+  <option value="Jan - Aug 2024">Jan - Aug 2024</option>
+  <option value="Sep - Dec 2024">Sep - Dec 2024</option>
+  <option value="Jan - Jun 2025">Jan - Jun 2025</option>
+  <option value="Jul - Dec 2025">Jul - Dec 2025</option>
+  <option value="Jan - Jun 2026">Jan - Jun 2026</option>
 </select>
           </div>
         </div>
