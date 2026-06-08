@@ -382,7 +382,17 @@ export default function App() {
               <option>All categories</option>
               {catData.map(c=><option key={c.category}>{c.category}</option>)}
             </select>
-            <div style={{ fontSize:11,color:'var(--t3)',background:'var(--card2)',border:'1px solid var(--border)',borderRadius:7,padding:'6px 12px' }}>Jan – Aug 2024</div>
+           <select 
+  style={{ fontSize:11,color:'var(--t3)',background:'var(--card2)',border:'1px solid var(--border)',borderRadius:7,padding:'6px 12px', outline:'none', cursor:'pointer', fontFamily:'var(--font)' }}
+  value={dateRange}
+  onChange={e => setDateRange(e.target.value)}
+>
+  <option value="Jan – Aug 2024">Jan – Aug 2024</option>
+  <option value="Sep – Dec 2024">Sep – Dec 2024</option>
+  <option value="Jan – Jun 2025">Jan – Jun 2025</option>
+  <option value="Jul – Dec 2025">Jul – Dec 2025</option>
+  <option value="Jan – Jun 2026">Jan – Jun 2026</option>
+</select>
           </div>
         </div>
         <div style={{ flex:1,overflow:'auto',padding:20 }}>
