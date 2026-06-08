@@ -9,6 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // YE KARO (SAHI)
+// KARO (SAHI)
 const db = mysql.createPool({
   host     : process.env.MYSQLHOST,
   user     : process.env.MYSQLUSER,
