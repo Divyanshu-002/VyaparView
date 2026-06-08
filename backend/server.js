@@ -17,6 +17,9 @@ const db = mysql.createPool({
   database : process.env.MYSQLDATABASE,
   port     : process.env.MYSQLPORT,
 });
+db.getConnection()
+  .then(() => console.log('✅ DB connected'))
+  .catch(err => console.error('❌ DB error:', err.message));
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
